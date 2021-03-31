@@ -7,8 +7,25 @@
   <title>Document</title>
 </head>
 <body>
-  <div>
-    hello bo bi!
-  </div>
+  <button onclick="test()">IOS测试</button>
+
+  <script>
+    // 是否是扫地机IOS
+    function isSweepingRobotIOS() {
+      const ua = window.navigator.userAgent;
+      return ua.indexOf('iPhone') > 0 && ua.indexOf('SweepingRobot') > 0;
+    }
+
+    
+
+    function test() {
+      if (isSweepingRobotIOS()) {
+        alert('扫地机-IOS-测试');
+        window.webkit.messageHandlers.openFeedBack.postMessage({
+          name: 'jack',
+        });
+      }
+    }
+  </script>
 </body>
 </html>
