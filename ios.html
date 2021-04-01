@@ -21,9 +21,7 @@
     function test() {
       if (isSweepingRobotIOS()) {
         alert('扫地机-IOS-测试');
-        window.webkit.messageHandlers.openFeedBack.postMessage({
-          name: 'jack',
-        });
+        window.webkit.messageHandlers.openFeedBack.postMessage({});
       }
     }
   </script>
